@@ -1,0 +1,1145 @@
+[
+    {
+        "id": "9a14df6306e7d09e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "21ddf1c8ba70a9cd",
+        "type": "mqtt in",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "topic": "aTopic",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a03786f4d6fa827a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 50,
+        "y": 360,
+        "wires": [
+            [
+                "e69197b635f1ae9e",
+                "4536177c811496c4",
+                "bcd64c758b39ad01",
+                "60ebb485bab500f8",
+                "1a07f18205812fcd",
+                "fc33a2e32ab09501",
+                "c5398df72a67bb7f",
+                "058e0728a83f0563",
+                "1f5a0987d8738160",
+                "225dc8c5c7be51a2",
+                "054d047a25f178db",
+                "c54aac3fcf2c574b",
+                "deec8070e91fa363"
+            ]
+        ]
+    },
+    {
+        "id": "e69197b635f1ae9e",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.hum",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "11c477c81764c7be",
+                "55b043898c054ca6"
+            ]
+        ]
+    },
+    {
+        "id": "4536177c811496c4",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.temp",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "7ab5e09148152e40",
+                "5782687ad7ddd873"
+            ]
+        ]
+    },
+    {
+        "id": "bcd64c758b39ad01",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "tVOC_C",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.tVOC_C",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "73964e8a7b38f493",
+                "bb6404ff502b9ec7"
+            ]
+        ]
+    },
+    {
+        "id": "60ebb485bab500f8",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.CO2_C",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "e1cb596b42288a0a",
+                "1334cef7d9898d1b"
+            ]
+        ]
+    },
+    {
+        "id": "11c477c81764c7be",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7ab5e09148152e40",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "73964e8a7b38f493",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e1cb596b42288a0a",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "55b043898c054ca6",
+        "type": "ui_gauge",
+        "z": "9a14df6306e7d09e",
+        "name": "Humidity",
+        "group": "9dd35bcedbc14a77",
+        "order": 1,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#226722",
+            "#9e9e51",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 800,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5782687ad7ddd873",
+        "type": "ui_gauge",
+        "z": "9a14df6306e7d09e",
+        "name": "Temperature",
+        "group": "9dd35bcedbc14a77",
+        "order": 4,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#36c936",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 810,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8edcde137a303dfb",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1334cef7d9898d1b",
+        "type": "ui_chart",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "group": "9dd35bcedbc14a77",
+        "order": 21,
+        "width": 6,
+        "height": 5,
+        "label": "CO2_C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#2874d7",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 800,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb6404ff502b9ec7",
+        "type": "ui_chart",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "group": "9dd35bcedbc14a77",
+        "order": 17,
+        "width": 6,
+        "height": 5,
+        "label": "tVOC_C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "300",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 800,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2a79212ac8d1989",
+        "type": "ui_text",
+        "z": "9a14df6306e7d09e",
+        "group": "9dd35bcedbc14a77",
+        "order": 15,
+        "width": 27,
+        "height": 1,
+        "name": "button",
+        "label": "Button",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 790,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1a07f18205812fcd",
+        "type": "function",
+        "z": "9a14df6306e7d09e",
+        "name": "function 1",
+        "func": "if (msg.payload.button === 1) {\n    msg.payload = \"Panic button is activated\";\n} else {\n    msg.payload = \"Panic button is not activated\";\n}\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "d2a79212ac8d1989",
+                "8edcde137a303dfb"
+            ]
+        ]
+    },
+    {
+        "id": "fc33a2e32ab09501",
+        "type": "function",
+        "z": "9a14df6306e7d09e",
+        "name": "function 2",
+        "func": "if (msg.payload.button === 1) {\n    msg.payload = \"Panic button is activated\";\n} else {\n}\n\n// Return the modified message\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "9ef81a9cb3c139ef",
+                "97c68cabe277372b"
+            ]
+        ]
+    },
+    {
+        "id": "c5398df72a67bb7f",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "oxygen concentraiton",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.o2_concentration",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "d3639e86de0f547e",
+                "afff9aee4bf2904d"
+            ]
+        ]
+    },
+    {
+        "id": "d3639e86de0f547e",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "afff9aee4bf2904d",
+        "type": "ui_gauge",
+        "z": "9a14df6306e7d09e",
+        "name": "o2_concentration",
+        "group": "9dd35bcedbc14a77",
+        "order": 2,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "O2_concentration",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#226722",
+            "#9e9e51",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 830,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9ef81a9cb3c139ef",
+        "type": "ui_audio",
+        "z": "9a14df6306e7d09e",
+        "name": "Alert",
+        "group": "9dd35bcedbc14a77",
+        "voice": "Google UK English Female",
+        "always": true,
+        "x": 790,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "97c68cabe277372b",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "058e0728a83f0563",
+        "type": "function",
+        "z": "9a14df6306e7d09e",
+        "name": "function 3",
+        "func": "if (msg.payload.toxic === 1) {\n    msg.payload = \"Danger\";\n} else {\n}\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "53bfa6d61a593cbc",
+                "36c957efadc55e1a"
+            ]
+        ]
+    },
+    {
+        "id": "53bfa6d61a593cbc",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "36c957efadc55e1a",
+        "type": "ui_audio",
+        "z": "9a14df6306e7d09e",
+        "name": "toxic alert",
+        "group": "9dd35bcedbc14a77",
+        "voice": "Microsoft Zira - English (United States)",
+        "always": true,
+        "x": 800,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "1f5a0987d8738160",
+        "type": "function",
+        "z": "9a14df6306e7d09e",
+        "name": "function 4",
+        "func": "if (msg.payload.toxic === 1) {\n    msg.payload = \"Danger\";\n} else {\n    msg.payload = \"Safe\";\n}\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "2da407454e746b00",
+                "b2562a7ee73c042a"
+            ]
+        ]
+    },
+    {
+        "id": "2da407454e746b00",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b2562a7ee73c042a",
+        "type": "ui_text",
+        "z": "9a14df6306e7d09e",
+        "group": "9dd35bcedbc14a77",
+        "order": 23,
+        "width": 3,
+        "height": 1,
+        "name": "toxic",
+        "label": "Condition",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 790,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "225dc8c5c7be51a2",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "Methane",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.Methane",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "f1452c112969b79b",
+                "87faa1679ea481c0"
+            ]
+        ]
+    },
+    {
+        "id": "f1452c112969b79b",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "87faa1679ea481c0",
+        "type": "ui_gauge",
+        "z": "9a14df6306e7d09e",
+        "name": "Methane",
+        "group": "9dd35bcedbc14a77",
+        "order": 6,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Methane",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 800,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "054d047a25f178db",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "NO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.Methane",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "a6febb832284f7be",
+                "db738c0a582568c7"
+            ]
+        ]
+    },
+    {
+        "id": "a6febb832284f7be",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "db738c0a582568c7",
+        "type": "ui_chart",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "group": "9dd35bcedbc14a77",
+        "order": 18,
+        "width": 6,
+        "height": 5,
+        "label": "NO2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 790,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c54aac3fcf2c574b",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "CO",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.CO",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "943e633d5a2f5781",
+                "5ee4f2e3ec13a8b2"
+            ]
+        ]
+    },
+    {
+        "id": "deec8070e91fa363",
+        "type": "change",
+        "z": "9a14df6306e7d09e",
+        "name": "Pressure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.Pressure",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "d149d1a26d8c32c2",
+                "5fc44c8eb9d22ba2"
+            ]
+        ]
+    },
+    {
+        "id": "943e633d5a2f5781",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d149d1a26d8c32c2",
+        "type": "debug",
+        "z": "9a14df6306e7d09e",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5ee4f2e3ec13a8b2",
+        "type": "ui_gauge",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "group": "9dd35bcedbc14a77",
+        "order": 7,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "5fc44c8eb9d22ba2",
+        "type": "ui_chart",
+        "z": "9a14df6306e7d09e",
+        "name": "",
+        "group": "9dd35bcedbc14a77",
+        "order": 20,
+        "width": 6,
+        "height": 5,
+        "label": "Pressure",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 800,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92968463d6cd4623",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f9f216f862c619d9",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "15044a8b989d4d11",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "662adffc201e46a2",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "00d09bd7dd89f11d",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "940ec9fbc4c93d0f",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "794c2168001fe2d3",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ead5c0d260836fa3",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5a3ec60cecc1a95d",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 14,
+        "width": 27,
+        "height": 1
+    },
+    {
+        "id": "f4cb03329eb9d76c",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 16,
+        "width": 27,
+        "height": 1
+    },
+    {
+        "id": "25a861d051018d92",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 19,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "5fac40c13591533b",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 22,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f896f44363dbb221",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 24,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "eb076ebb0e97bb18",
+        "type": "ui_spacer",
+        "z": "9a14df6306e7d09e",
+        "name": "spacer",
+        "group": "9dd35bcedbc14a77",
+        "order": 25,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a03786f4d6fa827a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9dd35bcedbc14a77",
+        "type": "ui_group",
+        "name": "Data",
+        "tab": "8d150b25943240b2",
+        "order": 1,
+        "disp": true,
+        "width": 27,
+        "collapse": false
+    },
+    {
+        "id": "8d150b25943240b2",
+        "type": "ui_tab",
+        "name": "Hazard sense",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
